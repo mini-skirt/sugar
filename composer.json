@@ -1,0 +1,14 @@
+{
+    "name": "mini-skirt/sugar",
+    "type": "library",
+    "version": "1.0.0",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MiniSkirt\\Sugar\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8"
+    }
+}
