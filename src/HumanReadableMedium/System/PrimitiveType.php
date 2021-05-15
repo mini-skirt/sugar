@@ -7,8 +7,8 @@ class PrimitiveType
     const DISPLAY_ARRAY_EMPTY     = '[]';
     const DISPLAY_BOOL_TRUE       = 'TRUE';
     const DISPLAY_BOOL_FALSE      = 'FALSE';
-    const DISPLAY_CALLABLE        = 'f(x)';
-    const DISPLAY_RESOURCE        = '{*IO}';
+    const DISPLAY_CALLABLE        = 'callable()';
+    const DISPLAY_RESOURCE        = 'res://...';
     const DISPLAY_NULL            = 'NULL';
     const DISPLAY_FALLBACK        = '...';
     
