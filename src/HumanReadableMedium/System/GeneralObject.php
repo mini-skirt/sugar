@@ -23,14 +23,15 @@ class GeneralObject
         }
 
         return match (true) {
-            ($inst instanceof \WeakMap)       => static::DISPLAY_WEAK_MAP,
-            ($inst instanceof \WeakReference) => static::DISPLAY_WEAK_REF,
-            ($inst instanceof \Generator)     => static::DISPLAY_GENERATOR,
-            ($inst instanceof \Throwable)     => static::DISPLAY_THROWABLE,
-            ($inst instanceof \Closure)       => static::DISPLAY_CLOSURE,
-            ($inst instanceof \ArrayAccess)   => static::DISPLAY_ARRAY_ACCESS,
-            ($inst instanceof \Serializable)  => static::DISPLAY_SERIALIZABLE,
-            ($inst instanceof \Traversable)   => static::DISPLAY_TRAVERSABLE,
+            ($inst instanceof \WeakMap)          => static::DISPLAY_WEAK_MAP,
+            ($inst instanceof \WeakReference)    => static::DISPLAY_WEAK_REF,
+            ($inst instanceof \Generator)        => static::DISPLAY_GENERATOR,
+            ($inst instanceof \Throwable)        => static::DISPLAY_THROWABLE,
+            ($inst instanceof \Closure)          => static::DISPLAY_CLOSURE,
+            ($inst instanceof \ArrayAccess)      => static::DISPLAY_ARRAY_ACCESS,
+            ($inst instanceof \Serializable)     => static::DISPLAY_SERIALIZABLE,
+            ($inst instanceof \Traversable)      => static::DISPLAY_TRAVERSABLE,
+            (method_exists($inst, '__toString')) => '{% '.$inst->__toString().'}',
             default => static::DISPLAY_UNKNOWN
         };
     }
